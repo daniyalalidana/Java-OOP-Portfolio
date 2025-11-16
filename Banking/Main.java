@@ -69,7 +69,7 @@ public class Main {
         current.getAccountSummary();
         
         // Account Manager Demo
-        System.out.println("\n📊 Account Manager Demo:");
+        System.out.println("\n Account Manager Demo:");
         AccountManager<BankAccount> manager = new AccountManager<>();
         manager.addAccount(savings);
         manager.addAccount(current);
