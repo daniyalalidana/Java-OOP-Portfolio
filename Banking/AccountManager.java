@@ -1,47 +1,40 @@
 package Banking;
+
 import java.util.ArrayList;
+
 public class AccountManager<T extends BankAccount> {
     ArrayList<T> accounts = new ArrayList<>();
-    void addAccount(T account)
-    {
+
+    void addAccount(T account) {
         accounts.add(account);
     }
 
-    void findAccount(String accountNumber)
-    {
-        for (T account: accounts)
-        {
-            if (account.getAccountNumber().equalsIgnoreCase(accountNumber))
-            {
-                                
+    void findAccount(String accountNumber) {
+        for (T account : accounts) {
+            if (account.getAccountNumber().equalsIgnoreCase(accountNumber)) {
+
                 System.out.println("Found!");
                 account.getAccountSummary();
+                return;
             }
-            else
-            {
-                System.out.println("Not found!");
-            }
-            
-
         }
+
+        System.out.println("Not found!"); // ✅ Only print once
+
     }
-    
-    double getTotalBalance()
-    {
+
+    double getTotalBalance() {
         double totalbalance = 0;
-        for (T account : accounts)
-        {
+        for (T account : accounts) {
             totalbalance += account.getBalance();
         }
         return totalbalance;
     }
 
-    void getAllAccounts()
-    {
-        for(T account :accounts)
-        {
+    void getAllAccounts() {
+        for (T account : accounts) {
             account.getAccountType();
         }
-        
+
     }
 }

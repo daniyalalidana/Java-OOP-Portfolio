@@ -3,8 +3,8 @@ package Banking;
 import java.time.LocalDate;
 
 public class LoanAccount extends BankAccount implements InterestBearing {
-    double principalAmount; 
-    double outstandingBalance; 
+    double principalAmount =balance; 
+    double outstandingBalance = balance; 
     double interestRate = 0.12;
     int remainingTerm = 12;
 

@@ -11,7 +11,7 @@ public class FixedDepositAccount extends BankAccount implements InterestBearing 
 
     FixedDepositAccount (String accountNumber, String accountHolderName, double balance, LocalDate openingDate )
     {
-        super(accountNumber, accountHolderName, balance, LocalDate.now());
+        super(accountNumber, accountHolderName, balance, openingDate);
         isActive = true;
     }
 

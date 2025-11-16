@@ -48,15 +48,16 @@ public abstract class BankAccount {
 
     void  withdraw(double amount)
     {
-        if(amount < 0)
+        if(amount <= 0)
         {
             System.out.println("plz, Enter Valid amount! ");
-            noTransactions++;
+            
         }
         else
         {
             balance -= amount;
             System.out.println("Successfully Withdraw! ");
+            noTransactions++;
         }
     }
 
