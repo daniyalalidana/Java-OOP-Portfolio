@@ -23,6 +23,7 @@ public abstract class BankAccount {
     }
 
     abstract String getAccountType();
+
     void closeAccount()
     {
         isActive = false;
